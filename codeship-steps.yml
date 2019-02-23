@@ -5,3 +5,7 @@
 - name: Build
   service: app
   command: mvn -B package -DskipTests -Pci
+
+- name: S3
+  service: awsdeployment
+  command: aws s3 cp /target/poc-cd-0.1.0-SNAPSHOT.jar s3://carcelg2
